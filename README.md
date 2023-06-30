@@ -13,7 +13,7 @@ Discord link : https://discord.gg/mt4dUxXryh
 3: Type python Core.py and it's done, follow client instructions.
 
 ### iOS client ###
-1: Download the client and extract it. https://www.mediafire.com/file/gam7nfj9j0w0qo4/BSDSV49.ipa/file
+1: Download the client and extract it. [https://www.mediafire.com/file/gam7nfj9j0w0qo4/BSDSV49.ipa/file](https://www.mediafire.com/file/5q3l3uje0j3az00/BSDS_V50.ipa/file)
 
 2: go to Payload/Brawl Stars.app/ in your file manager and start a new tab and go to this location in your terminal.
 
@@ -45,7 +45,7 @@ Discord link : https://discord.gg/mt4dUxXryh
 
 2: if you don't want bsds settings you could disable it by setting hideBSDSSettings to true 
 
-![IMG_0693](https://github.com/risporce/BSDS-V49/assets/72312877/f794149f-a9e2-4ab1-9eed-a03754974dc7)
+![IMG_0969](https://github.com/risporce/BSDS-V50/assets/72312877/0750e417-0213-408b-bcf9-7f4ac95200c5)
 
 ## credits ##
 [kagenay#7241](https://github.com/kagenay) Android Client
