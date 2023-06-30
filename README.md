@@ -45,7 +45,7 @@ Discord link : https://discord.gg/mt4dUxXryh
 
 2: if you don't want bsds settings you could disable it by setting hideBSDSSettings to true 
 
-![IMG_0969](https://github.com/risporce/BSDS-V50/assets/72312877/0750e417-0213-408b-bcf9-7f4ac95200c5)
+![IMG_0969](https://github.com/risporce/BSDS-V50/assets/72312877/05c6c070-2fae-4c3f-ba2e-6a790f663a7b)
 
 ## credits ##
 [kagenay](https://github.com/kagenay) Android Client
