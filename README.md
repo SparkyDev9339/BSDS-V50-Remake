@@ -13,7 +13,7 @@ Discord link : https://discord.gg/mt4dUxXryh
 3: Type python Core.py and it's done, follow client instructions.
 
 ### iOS client ###
-1: Download the client and extract it. [https://www.mediafire.com/file/gam7nfj9j0w0qo4/BSDSV49.ipa/file](https://www.mediafire.com/file/5q3l3uje0j3az00/BSDS_V50.ipa/file)
+1: Download the client and extract it. [https://www.mediafire.com/file/5q3l3uje0j3az00/BSDS_V50.ipa/file](https://www.mediafire.com/file/5q3l3uje0j3az00/BSDS_V50.ipa/file)
 
 2: go to Payload/Brawl Stars.app/ in your file manager and start a new tab and go to this location in your terminal.
 
