@@ -172,7 +172,7 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeVInt(0)
         self.writeVInt(72292)
         self.writeVInt(0)
-        self.writeDataReference(15, 122) # map id
+        self.writeDataReference(15, 15) # map id
         self.writeVInt(-1)
         self.writeVInt(2)
         self.writeString("")

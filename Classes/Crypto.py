@@ -64,7 +64,7 @@ class Crypto:
             payload = bytearray(16) + bytearray(payload)
             decrypted = bytearray(len(payload))
             crypto_secretbox_xsalsa20poly1305_tweet_open(decrypted, payload, len(payload), bytes(self.decryptNonce), self.shared_encryption_key)
-            return decrypted
+            return decrypted[32:]
 
     def encryptServer(self, packet_id, payload):
         if packet_id == 20100 or packet_id == 20103:
