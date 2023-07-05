@@ -13,8 +13,8 @@ class GetPlayerProfileMessage(PiranhaMessage):
 
     def decode(self):
         fields = {}
-        fields["PlayerHighID"] = self.readInt()
-        fields["PlayerLowID"] = self.readInt()
+        # fields["PlayerHighID"] = self.readInt()
+        # fields["PlayerLowID"] = self.readInt()
         #fields["PlayerProfileID"] = self.readLong()
         fields["BattleInfoBoolean"] = self.readBoolean()
         if fields["BattleInfoBoolean"]:
@@ -33,6 +33,8 @@ class GetPlayerProfileMessage(PiranhaMessage):
             fields["NameColor"] = self.readVInt()
             fields["unk10"] = self.readVInt()
         fields["unk11"] = self.readVInt()
+        fields["PlayerHighID"] = self.readInt()
+        fields["PlayerLowID"] = self.readInt()
         super().decode(fields)
 
 
@@ -43,7 +45,7 @@ class GetPlayerProfileMessage(PiranhaMessage):
         Messaging.sendMessage(24113, fields, cryptoInit, calling_instance.player)
 
     def getMessageType(self):
-        return 14113
+        return 15081
 
     def getMessageVersion(self):
         return self.messageVersion

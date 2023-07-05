@@ -100,7 +100,7 @@ class LogicLaserMessageFactory:
         14108: 'GoHomeFromSpectateMessage',
         #14109: GoHomeFromOfflinePractiseMessage, //before v50
         14110: AskForBattleEndMessage,
-        14113: GetPlayerProfileMessage,
+        #14113: GetPlayerProfileMessage, //before v50
         14114: 'GetBattleLogMessage',
         14115: 'BattleLogViewReplayMessage',
         14116: 'ViewReplayByStringMessage',
@@ -181,6 +181,7 @@ class LogicLaserMessageFactory:
         14880: 'TeamRequestJoinCancelMessage',
         14881: 'TeamRequestJoinMessage',
         14882: 'TeamRequestJoinApproveMessage',
+        15081: GetPlayerProfileMessage, #v50
         15793: 'GetTokenFriendMessage',
         16000: 'LogicDeviceLinkCodeRequestMessage',
         16001: 'LogicDeviceLinkMenuClosedMessage',
@@ -191,7 +192,7 @@ class LogicLaserMessageFactory:
         17190: 'JoinAllianceUsingTokenMessage',
         17337: 'UnbotifyReportMessage',
         17338: 'AdjustPackageMessage',
-        17750: GoHomeFromOfflinePractiseMessage,
+        17750: GoHomeFromOfflinePractiseMessage, #v50
         18686: 'SetSupportedCreatorMessage',
         19001: 'LatencyTestResultMessage',
         19002: 'UdpLatencyTestRequestMessage',

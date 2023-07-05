@@ -8,22 +8,22 @@ class PlayerProfileMessage(PiranhaMessage):
 
     def encode(self, fields, player):
         self.writeVLong(fields["PlayerHighID"], fields["PlayerLowID"])
-        self.writeDataReference(0)
-        self.writeVInt(63)
-        for i in range(63):
+        self.writeDataReference(16,11) # 
+        self.writeVInt(70)
+        for i in range(70):
             self.writeDataReference(16, i)
             self.writeDataReference(0)
             self.writeVInt(500) # trophies
             self.writeVInt(1250) # highestTrophies
             self.writeVInt(11) #power level
         
-        self.writeVInt(17)
+        self.writeVInt(18)
 
         self.writeVInt(1) 
         self.writeVInt(1) # 3v3 victories
 
         self.writeVInt(2)
-        self.writeVInt(2) # total exp
+        self.writeVInt(528859) # total exp
 
         self.writeVInt(3)
         self.writeVInt(3) # current trophies
@@ -68,7 +68,10 @@ class PlayerProfileMessage(PiranhaMessage):
         self.writeVInt(16)
 
         self.writeVInt(20) # number fame
-        self.writeVInt(69)
+        self.writeVInt(1000)
+
+        self.writeVInt(21)
+        self.writeVInt(502052) #v50
 
         self.writeString("risporce")  #PlayerInfo
         self.writeVInt(100)
@@ -77,11 +80,16 @@ class PlayerProfileMessage(PiranhaMessage):
         self.writeVInt(14)
 
         self.writeBoolean(True)
-        self.writeVInt(0)
+        self.writeVInt(300)
 
         self.writeString("hello world")
-        self.writeVInt(0)
-        self.writeVInt(0)
+        self.writeVInt(100)
+        self.writeVInt(200)
+        self.writeDataReference(29, 558)
+        self.writeDataReference(0)
+        self.writeDataReference(0)
+        self.writeDataReference(0)
+        self.writeDataReference(0)
 
         self.writeBoolean(True) #alliance
         self.writeLong(0,1) #alliance ID
@@ -99,6 +107,7 @@ class PlayerProfileMessage(PiranhaMessage):
         
 
         self.writeDataReference(25, 1) #alliance role
+        self.writeVInt(16)
 
     def decode(self):
         pass
