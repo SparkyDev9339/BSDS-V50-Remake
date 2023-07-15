@@ -6,7 +6,7 @@ class LogicServerCommand(LogicCommand):
         super().__init__(commandData)
 
     def addCommand(self, fields):
-        self.writeVInt(0)
+        self.writeVInt(1)
         LogicCommand.encode(self, fields)
 
     def decode(calling_instance, fields):

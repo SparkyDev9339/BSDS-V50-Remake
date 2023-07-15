@@ -7,9 +7,9 @@ class AvailableServerCommandMessage(PiranhaMessage):
         super().__init__(messageData)
         self.messageVersion = 0
 
-    def encode(self, fields):
-        self.writeVInt(fields["Command"]["ID"])
-        command = LogicCommandManager.createCommand(fields["Command"]["ID"], self.messagePayload)
+    def encode(self, fields, player):
+        self.writeVInt(fields["ServerCommandID"])
+        command = LogicCommandManager.createCommand(fields["ServerCommandID"], self.messagePayload)
         self.messagePayload = command.encode(fields)
 
     def decode(self):

@@ -13,9 +13,6 @@ class GetPlayerProfileMessage(PiranhaMessage):
 
     def decode(self):
         fields = {}
-        # fields["PlayerHighID"] = self.readInt()
-        # fields["PlayerLowID"] = self.readInt()
-        #fields["PlayerProfileID"] = self.readLong()
         fields["BattleInfoBoolean"] = self.readBoolean()
         if fields["BattleInfoBoolean"]:
             fields["unk1"] = self.readVInt()

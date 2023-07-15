@@ -10,9 +10,11 @@ class LogicCommand(ByteStream):
         self.messagePayload = commandData
 
     def encode(self, fields):
+        self.writeVInt(-1)
+        self.writeVInt(-1)
         self.writeVInt(0)
         self.writeVInt(0)
-        self.writeVLong(0, 0)
+        #self.writeVLong(0, 0)
 
     def decode(calling_instance, fields, auto_decode=True):
         fields["TickWhenGiven"] = calling_instance.readVInt()

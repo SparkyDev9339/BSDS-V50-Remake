@@ -1,6 +1,8 @@
 from Classes.Logic.LogicCommandManager import LogicCommandManager
+from Classes.Logic.LogicStarrDropData import starrDropOpening
 
 from Classes.Packets.PiranhaMessage import PiranhaMessage
+from Classes.Messaging import Messaging
 
 
 class EndClientTurnMessage(PiranhaMessage):
@@ -36,7 +38,14 @@ class EndClientTurnMessage(PiranhaMessage):
                 return
 
             if hasattr(command["Instance"], 'execute'):
-                command["Instance"].execute(calling_instance, command["Fields"], cryptoInit)
+                command["Instance"].execute(calling_instance, command["Fields"])
+            if command["ID"] == 571:
+                fields["ServerCommandID"] = 203
+                Messaging.sendMessage(24111, fields, cryptoInit, calling_instance.player)
+                fields["ServerCommandID"] = 228
+                Messaging.sendMessage(24111, fields, cryptoInit, calling_instance.player)
+            elif command["ID"] == 519:
+                Messaging.sendMessage(24104, {"Socket": calling_instance.client, "ServerChecksum": 0, "ClientChecksum": 0, "Tick": 0}, cryptoInit)
 
     def getMessageType(self):
         return 14102

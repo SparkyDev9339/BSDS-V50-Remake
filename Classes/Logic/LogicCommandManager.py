@@ -1,12 +1,16 @@
 from Classes.Commands.Client.LogicPurchaseOfferCommand import LogicPurchaseOfferCommand
+from Classes.Commands.Client.LogicOpenRandomCommand import LogicOpenRandomCommand
 from Classes.Commands.Server.LogicChangeAvatarNameCommand import LogicChangeAvatarNameCommand
+from Classes.Commands.Server.LogicGiveDeliveryItemsCommand import LogicGiveDeliveryItemsCommand
+from Classes.Commands.Server.LogicRefreshRandomRewardsCommand import LogicRefreshRandomRewardsCommand
+
 
 
 class LogicCommandManager:
     commandsList = {
         201: LogicChangeAvatarNameCommand,
         202: 'LogicDiamondsAddedCommand',
-        203: 'LogicGiveDeliveryItemsCommand',
+        203: LogicGiveDeliveryItemsCommand,
         204: 'LogicDayChangedCommand',
         205: 'LogicDecreaseHeroScoreCommand',
         206: 'LogicAddNotificationCommand',
@@ -28,6 +32,7 @@ class LogicCommandManager:
         222: 'LogicRankedSeasonChangedCommand',
         223: 'LogicCooldownAddedCommand',
         224: 'LogicSetESportsHubNotificationCommand',
+        228: LogicRefreshRandomRewardsCommand,
         500: 'LogicGatchaCommand',
         503: 'LogicClaimDailyRewardCommand',
         504: 'LogicSendAllianceMailCommand',
@@ -65,7 +70,8 @@ class LogicCommandManager:
         539: 'LogicBrawlPassAutoCollectWarningSeenCommand',
         540: 'LogicPurchaseChallengeLivesCommand',
         541: 'LogicClearESportsHubNotificationCommand',
-        542: 'LogicSelectGroupSkinCommand'
+        542: 'LogicSelectGroupSkinCommand',
+        571: LogicOpenRandomCommand
     }
 
     def getCommandsName(commandType):

@@ -1,5 +1,6 @@
 from Classes.ByteStreamHelper import ByteStreamHelper
 from Classes.Packets.PiranhaMessage import PiranhaMessage
+from Classes.Logic.LogicStarrDropData import starrDropOpening
 
 
 class OwnHomeDataMessage(PiranhaMessage):
@@ -9,15 +10,15 @@ class OwnHomeDataMessage(PiranhaMessage):
 
     def encode(self, fields, player):
 
-        self.writeVInt(-1433793731) #timestamp
-        self.writeVInt(2023064)#timestamp
-        self.writeVInt(52685)#timestamp LogicDailyDataBegin
-        self.writeVInt(52685) #timestamp
+        self.writeVInt(1688816070) #timestamp
+        self.writeVInt(1191532375)#timestamp
+        self.writeVInt(2023189)#timestamp LogicDailyDataBegin
+        self.writeVInt(73530) #timestamp
         self.writeVInt(50000) # current trophies
         self.writeVInt(50000) # hightest trophies
         self.writeVInt(50000) #highest trophies today
         self.writeVInt(300) # collected trophy road rewards
-        self.writeVInt(503026) # exp points
+        self.writeVInt(528867) # exp points
          # profile icon
         self.writeDataReference(28, 128)
         # name color
@@ -48,9 +49,9 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeBoolean(True) # battle hints
         self.writeVInt(0) # token doubler left
         self.writeVInt(115) # maybe starr drop timer ? #v50
-        self.writeVInt(52684) # trophy league timer
-        self.writeVInt(722284) # power play timer
-        self.writeVInt(56284) # Brawl pass season timer
+        self.writeVInt(335442) # trophy league timer
+        self.writeVInt(1001442) # power play timer
+        self.writeVInt(5778642) # Brawl pass season timer
         #self.writeVInt(0) # maybe starr drop timer ? #v50
 
         self.writeVInt(120) # 
@@ -69,7 +70,279 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeVInt(0) # name change cost
         self.writeVInt(0) # timer for next name change
 
-        self.writeVInt(0) # shop offers count
+        self.writeVInt(8) # shop offers count
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(3) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(1) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("3 STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_popstar")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(5) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(10) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(2) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("10 STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_popstar")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(10) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(25) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(3) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("25 STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_popstar")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(25) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(10) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(10) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("10 RARE STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_wf")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(10) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(10) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(10) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("10 SUPER RARE STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_wf")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(10) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(10) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(10) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("10 EPIC STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_wf")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(10) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(10) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(10) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("10 MYTHIC STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_wf")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(10) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
+
+        self.writeVInt(1) # reward count
+        self.writeVInt(45) # item type
+        self.writeVInt(10) # quantity
+        self.writeDataReference(0)# csv reference
+        self.writeVInt(0) 
+        self.writeVInt(0)
+        self.writeVInt(10) # new price
+        self.writeVInt(19909) # timer until gone
+        self.writeVInt(1)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(8881)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeVInt(0) # old price
+        self.writeStringReference("10 LEGENDARY STARR DROP OFFER") # title
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeString("offer_wf")
+        self.writeVInt(-1)
+        self.writeBoolean(False)
+        self.writeVInt(1)
+        self.writeVInt(10) # offer value
+        self.writeString("")
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(0)
+        self.writeBoolean(False)
+        self.writeBoolean(False)
+        self.writeVInt(0)
+        self.writeVInt(-1)
+        self.writeVInt(0)
 
         self.writeVInt(20) # tokens for battle
         self.writeVInt(1428) # timer until new token
@@ -84,7 +357,21 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeString("CA") # location
         self.writeString("BSDS") # supported creator
 
-        self.writeVInt(0) # resources gained
+        self.writeVInt(6) # count
+        self.writeVInt(1) # resources id
+        self.writeVInt(9) # resources gained
+        self.writeVInt(1) # resources id
+        self.writeVInt(22) # resources gained
+        self.writeVInt(3) # resources id
+        self.writeVInt(25) # resources gained
+        self.writeVInt(1) # resources id
+        self.writeVInt(24) # resources gained
+        self.writeVInt(0) # resources id
+        self.writeVInt(15) # resources gained
+        self.writeVInt(32447) # resources id
+        self.writeVInt(28) # resources gained
+
+
         self.writeVInt(0) # count 0
 
         self.writeVInt(19) # count brawl pass seasons
@@ -93,7 +380,7 @@ class OwnHomeDataMessage(PiranhaMessage):
             self.writeVInt(56796) # season token collected
             self.writeBoolean(True) # 0x1
             self.writeVInt(56)
-            self.writeBoolean(False) # 0x0
+            self.writeBoolean(False)
             self.writeBoolean(True) # 0x1
             self.writeInt(-4)
             self.writeInt(16383)
@@ -115,20 +402,20 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeVInt(0) # club league quest count
 
         self.writeBoolean(True) # Vanity items
-        # self.writeVInt(1)
-        # self.writeVInt(0)
-        # self.writeVInt(0)
+        self.writeVInt(1)
+        self.writeVInt(52)
+        self.writeVInt(216)
+        self.writeVInt(0)
 
 
         self.writeBoolean(False) # Power league season data
 
         self.writeInt(0)
-        self.writeVInt(1)
-        self.writeVInt(16)
-        self.writeVInt(11)
+        self.writeVInt(0)
+        self.writeVInt(0)
         self.writeBoolean(False) # Logic Daily Data end
 
-        self.writeVInt(2023070) # Logic Conf Data begin
+        self.writeVInt(2023189) # Logic Conf Data begin
 
         self.writeVInt(33) # event slot id
         self.writeVInt(1)
@@ -172,7 +459,7 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeVInt(0)
         self.writeVInt(72292)
         self.writeVInt(0)
-        self.writeDataReference(15, 15) # map id
+        self.writeDataReference(15, 21) # map id
         self.writeVInt(-1)
         self.writeVInt(2)
         self.writeString("")
@@ -235,18 +522,18 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeVInt(4)
 
         ByteStreamHelper.encodeIntList(self, [0, 29, 79, 169, 349, 699]) # brawler cost gems ?
-        ByteStreamHelper.encodeIntList(self, [0, 160, 450, 500, 1500, 4500]) # what is that ? looks like chroma price of chromatic brawlers but it doesn't go under 500
+        ByteStreamHelper.encodeIntList(self, [0, 160, 450, 500, 1250, 2500]) # what is that ? looks like chroma price of chromatic brawlers but it doesn't go under 500
 
         self.writeLong(0, 1) # Player ID
 
         self.writeVInt(0) # Notification factory
         
-        self.writeVInt(-1)
-        self.writeBoolean(False) # 0x0
+        self.writeVInt(1)
+        self.writeBoolean(False)
         self.writeVInt(0) # gatcha drop
         self.writeVInt(0) 
         self.writeVInt(0)
-        self.writeBoolean(False) # 0x0
+        self.writeBoolean(False)
         # new function v46
         self.writeVInt(0) # new function v46
         self.writeBoolean(False) # login calendar ?
@@ -266,29 +553,7 @@ class OwnHomeDataMessage(PiranhaMessage):
         self.writeVInt(0)
 
         # v50 this is starr drop thing
-        # self.writeVInt(2)
-        # self.writeVInt(80)
-        # self.writeVInt(0)
-        # self.writeVInt(-1)
-        # self.writeVInt(2)
-        # self.writeVInt(80)
-        # self.writeVInt(-1)
-        # self.writeVInt(1)
-        # self.writeVInt(100)
-        # self.writeVInt(100)
-        # self.writeVInt(100)
-        # self.writeInt(1550850601)
-        # self.writeVInt(900)
-        # self.writeVInt(100)
-        # self.writeVInt(-3923)
-        self.writeVInt(0)
-        self.writeVInt(0)
-        self.writeVInt(0)
-        self.writeInt(0)
-        self.writeVInt(0)
-        self.writeVInt(0)
-        self.writeVInt(0)
-        # v50
+        starrDropOpening.encode(self)
         #self.writeVInt(0) # end LogicClientHome
 
         self.writeVLong(0, 1) # player id
@@ -308,15 +573,15 @@ class OwnHomeDataMessage(PiranhaMessage):
 
         self.writeDataReference(5, 8)
         self.writeVInt(-1)
-        self.writeVInt(1090)
+        self.writeVInt(0)
 
         self.writeDataReference(5, 10)
         self.writeVInt(-1)
-        self.writeVInt(73)
+        self.writeVInt(0)
 
         self.writeDataReference(5, 13)
         self.writeVInt(-1)
-        self.writeVInt(22)
+        self.writeVInt(0)
 
 
         self.writeVInt(72) # HeroScore

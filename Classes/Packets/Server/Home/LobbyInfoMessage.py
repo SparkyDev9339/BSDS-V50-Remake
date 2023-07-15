@@ -1,5 +1,6 @@
 from Classes.ClientsManager import ClientsManager
 from Classes.Packets.PiranhaMessage import PiranhaMessage
+from Classes.Logic.LogicStarrDropData import starrDropOpening
 
 
 class LobbyInfoMessage(PiranhaMessage):
@@ -9,7 +10,12 @@ class LobbyInfoMessage(PiranhaMessage):
 
     def encode(self, fields, player):
         self.writeVInt(ClientsManager.GetCount())
-        self.writeString("Project BSDS \n"f"Version: {player.ClientVersion}")
+        self.writeString(f"""Project BSDS \n Version: {player.ClientVersion}
+starrdrop rare count: {starrDropOpening.rare_count}
+starrdrop super rare count: {starrDropOpening.super_rare_count}
+starrdrop epic count: {starrDropOpening.epic_count}
+starrdrop mythic count: {starrDropOpening.mythic_count}
+starrdrop legendary count: {starrDropOpening.legendary_count}""")
         self.writeVInt(0)
 
     def decode(self):

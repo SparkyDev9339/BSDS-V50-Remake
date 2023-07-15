@@ -1,11 +1,10 @@
 import csv
 
+class Emotes:
 
-class Pins:
-
-    def getPinsID():
+    def getPinsIDSSpecificPrice(self, min, max):
         EmotesID = []
-        with open('Classes/Files/assets/csv_logic/emotes.csv') as csv_file:
+        with open('Classes/Files/Assets/emotes.csv') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
             for row in csv_reader:
@@ -13,7 +12,10 @@ class Pins:
                     line_count += 1
                 else:
                     if row[1].lower() != 'true':
-                        EmotesID.append(line_count - 2)
+                        pin_gem_price = row[18]
+                        if (pin_gem_price != ''):
+                            if int(pin_gem_price) >= min and int(pin_gem_price) <= max:
+                                EmotesID.append(line_count - 2)
                     if row[0] != "":
                         line_count += 1
 

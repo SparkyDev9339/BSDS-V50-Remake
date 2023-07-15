@@ -31,8 +31,8 @@ class AllianceDataMessage(PiranhaMessage):
         self.writeVInt(0) # status: 0=offline 2=online
         self.writeVInt(1) # last connected time seconds ?
         highestPowerLeagueRank = 2
+        self.writeVInt(highestPowerLeagueRank)
         if highestPowerLeagueRank != 0:
-            self.writeVInt(highestPowerLeagueRank)
             self.writeVInt(2) #solo
             self.writeVInt(1) #duo
         self.writeBoolean(False) # boolean always false?
@@ -41,13 +41,13 @@ class AllianceDataMessage(PiranhaMessage):
         self.writeVInt(100) # VInt always 100
         self.writeVInt(28000183) # thumbnail
         self.writeVInt(43000008) # name color
-        self.writeVInt(0) # idk but this number change
+        self.writeVInt(-1)
 
         self.writeVInt(-1) # most people have it -1 but some with something
         self.writeBoolean(False) # whats this ? only 2/30 people have it true in my club
-        week = 0
+        week = 58 # week 58 of club league as of 2023/07/05, this number is 0 if you just arrived in the club
+        self.writeVInt(week)
         if week != 0: # club league week number?
-            self.writeVInt(week)
             self.writeVInt(3) # day
             self.writeVInt(18) # total club trophies earned
             self.writeVInt(0) # event day club trophies earned
