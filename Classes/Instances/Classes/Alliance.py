@@ -1,2 +1,0 @@
-class Alliance:
-    pass

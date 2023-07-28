@@ -1,2 +1,0 @@
-class InstanceHandler:
-    pass
