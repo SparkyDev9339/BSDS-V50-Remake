@@ -27,8 +27,8 @@ Discord link : https://discord.gg/mt4dUxXryh
 
 7: Install the client using your favorite app installer and enjoy BSDS.
 
-### Android client ###
-1: Download the apk here: https://www.mediafire.com/file/t74dqasu380cht3/project-bsds-v50.apk/file
+### Android client [fixed crashes] ###
+1: Download the apk here: https://www.mediafire.com/file/s2tmrmlpmlmg2b9/project-bsds-v50-fixed.apk/file
 
 2: Download an apk editor of your choice
 
