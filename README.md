@@ -53,3 +53,5 @@ Discord link : https://discord.gg/mt4dUxXryh
 [S.B#0056](https://github.com/HaccerCat) for his help with crypto and client
 
 [Vitalik](https://github.com/VitalikObject) for his crypto from [OldBrawl](https://github.com/VitalikObject/OldBrawl)
+
+[Sparky](https://github.com/SparkyDev9339) DataBase and Create Account
